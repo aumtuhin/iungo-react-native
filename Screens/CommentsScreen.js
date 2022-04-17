@@ -1,12 +1,11 @@
-import { Text } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { Text, View } from "react-native";
 
 export default function CommentsScreen({ route }) {
   const { postID } = route.params;
   return (
-    <SafeAreaView>
+    <View>
       <Text>CommentsScreen</Text>
       <Text>Post id : {postID}</Text>
-    </SafeAreaView>
+    </View>
   );
 }

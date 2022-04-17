@@ -3,9 +3,7 @@ import LoginScreen from "../Screens/LoginScreen";
 import SignupScreen from "../Screens/SignupScreen";
 import OnboardScreen from "../Screens/OnboardScreen";
 import CameraScreen from "../Screens/CameraScreen";
-import AppStack from "./AppStack";
-import InboxScreen from "../Screens/InboxScreen";
-import CommentsScreen from "../Screens/CommentsScreen";
+import HomeScreenStack from "./HomeScreenStack";
 
 const Stack = createNativeStackNavigator();
 
@@ -26,24 +24,9 @@ export default function AuthStack({ isFirstLaunch }) {
       />
       <Stack.Screen name="Signup" component={SignupScreen} />
       <Stack.Screen
-        name="Camera"
-        component={CameraScreen}
+        name="HomeScreenStack"
+        component={HomeScreenStack}
         options={{ gestureEnabled: false }}
-      />
-      <Stack.Screen
-        name="App"
-        component={AppStack}
-        options={{ gestureEnabled: false }}
-      />
-      <Stack.Screen
-        name="Inbox"
-        component={InboxScreen}
-        options={{ headerShown: true }}
-      />
-      <Stack.Screen
-        name="Comments"
-        component={CommentsScreen}
-        options={{ headerShown: true }}
       />
     </Stack.Navigator>
   );

@@ -10,9 +10,16 @@ import { FontAwesome5 } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
 import IconButton from "./IconButton";
+import User from "./User";
 import { useState, useCallback } from "react";
 
-export default function PostCard({ user, content, actions, navigation, postID }) {
+export default function PostCard({
+  user,
+  content,
+  actions,
+  navigation,
+  postID,
+}) {
   const [like, setLike] = useState(false);
   const [isBookmark, setIsBookmark] = useState(false);
   const [lastPressed, setLastPressed] = useState(0);
@@ -36,22 +43,20 @@ export default function PostCard({ user, content, actions, navigation, postID })
   }, [lastPressed]);
 
   const onBookmark = () => {
-      setIsBookmark(!isBookmark);
-  }
+    setIsBookmark(!isBookmark);
+  };
 
   const onPressComment = () => {
-      navigation.navigate("Comments", {
-          postID: postID
-      });
-  }
+    navigation.navigate("Comments", {
+      postID: postID,
+    });
+  };
 
   return (
     <View style={styles.container}>
       <View style={styles.cardTopContainer}>
         <View style={styles.user}>
-          <TouchableOpacity>
-            <Image style={styles.avatar} source={{ uri: user.avatar }} />
-          </TouchableOpacity>
+          <User avatar={user.avatar} size={35} />
           <TouchableOpacity style={styles.nameBtn}>
             <Text>{user.name}</Text>
           </TouchableOpacity>
@@ -89,7 +94,7 @@ export default function PostCard({ user, content, actions, navigation, postID })
         </View>
         <View style={styles.rightButtons}>
           <View style={styles.actionBtn}>
-            <TouchableOpacity onPress={onBookmark} >
+            <TouchableOpacity onPress={onBookmark}>
               {!isBookmark && (
                 <Ionicons name="ios-bookmark-outline" size={25} color="black" />
               )}

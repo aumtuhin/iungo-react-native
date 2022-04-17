@@ -14,7 +14,7 @@ export default function LoginScreen({ navigation }) {
   const [isLoading, setIsLoading] = useState(false);
 
   const submit = async () => {
-    navigation.navigate("App");
+    navigation.navigate("HomeScreenStack");
   };
 
   const navigate = () => {
