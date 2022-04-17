@@ -9,6 +9,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import Input from "../components/Input";
 import DefaultButton from "../components/DefaultButton";
 import LinkButton from "../components/LinkButton";
+import { colors } from "../shared/style";
 
 export default function LoginScreen({ navigation }) {
   const [isLoading, setIsLoading] = useState(false);
@@ -33,7 +34,7 @@ export default function LoginScreen({ navigation }) {
         {isLoading ? (
           <ActivityIndicator style={styles.loading} size="large" color="#0000ff" />
         ) : (
-          <DefaultButton btnText="Login" onPressHandle={submit} />
+          <DefaultButton btnText="Login" color={colors.purple} onPressHandle={submit} />
         )}
         <LinkButton
           btnText="Don't you have account? Signup."

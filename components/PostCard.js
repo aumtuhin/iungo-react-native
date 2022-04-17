@@ -10,8 +10,9 @@ import { FontAwesome5 } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
 import IconButton from "./IconButton";
-import User from "./User";
+import Avatar from "./Avatar";
 import { useState, useCallback } from "react";
+import { colors } from "../shared/style";
 
 export default function PostCard({
   user,
@@ -56,9 +57,9 @@ export default function PostCard({
     <View style={styles.container}>
       <View style={styles.cardTopContainer}>
         <View style={styles.user}>
-          <User avatar={user.avatar} size={35} />
+          <Avatar avatar={user.avatar} size={35} />
           <TouchableOpacity style={styles.nameBtn}>
-            <Text>{user.name}</Text>
+            <Text style={styles.name} >{user.name}</Text>
           </TouchableOpacity>
         </View>
         <IconButton
@@ -127,15 +128,12 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
   },
-  avatar: {
-    borderColor: "#a874ff",
-    borderWidth: 2,
-    height: 35,
-    width: 35,
-    borderRadius: 25,
-  },
   nameBtn: {
     marginLeft: 10,
+  },
+  name: {
+    color: colors.grey,
+    fontSize: 14
   },
   content: {
     width: "90%",
@@ -166,7 +164,7 @@ const styles = StyleSheet.create({
   },
   actionText: {
     marginLeft: 5,
-    color: "#000",
+    color: colors.grey,
     fontWeight: "400",
   },
 });
