@@ -1,0 +1,1 @@
+export const firstLaunch = 'FIRST_LAUNCH';
