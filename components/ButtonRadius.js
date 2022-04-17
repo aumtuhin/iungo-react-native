@@ -2,34 +2,34 @@ import { StyleSheet, Text, TouchableOpacity } from "react-native";
 import React from "react";
 import { colors } from "../shared/style";
 
-export default function DefaultButton({
+export default function ButtonRadius({
   navigation,
   btnText,
   onPressHandle,
+  bgColor,
   color,
+  width
 }) {
   return (
     <TouchableOpacity
-      style={[styles.btn, { backgroundColor: color }]}
+      style={[styles.btn, { backgroundColor: bgColor, width: width, }]}
       onPress={() => onPressHandle()}
     >
-      <Text style={styles.btnText}>{btnText}</Text>
+      <Text style={[styles.btnText, { color: color }]}>{btnText}</Text>
     </TouchableOpacity>
   );
 }
 
 const styles = StyleSheet.create({
   btn: {
-    marginTop: 10,
-    height: 45,
-    width: "80%",
+    padding: 8,
+    borderRadius: 40,
     justifyContent: "center",
-    borderRadius: 4,
     borderColor: colors.purple,
+    borderWidth: 1,
   },
   btnText: {
     textAlign: "center",
-    color: "#fff",
-    fontSize: 20,
+    fontSize: 16
   },
 });
