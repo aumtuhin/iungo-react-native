@@ -4,6 +4,7 @@ import DetailsArea from "../components/Profile/DetailsArea";
 import Posts from "../components/Profile/Posts";
 
 export default function ProfileScreen({ navigation }) {
+
   return (
     <ScrollView>
       <View style={styles.container}>

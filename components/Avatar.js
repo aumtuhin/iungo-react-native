@@ -1,7 +1,7 @@
 import { TouchableOpacity, Image, StyleSheet } from "react-native";
 import { colors } from "../shared/style";
 
-export default function Avatar({ avatar, size }) {
+export default function Avatar({ avatar, size, onPressHandler }) {
   return (
     <TouchableOpacity
       style={[
@@ -9,6 +9,7 @@ export default function Avatar({ avatar, size }) {
         { height: size + 8, width: size + 8, borderRadius: size },
       ]}
       activeOpacity={0.6}
+      onPress={onPressHandler}
     >
       <Image
         style={[
