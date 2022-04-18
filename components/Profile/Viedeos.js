@@ -20,11 +20,11 @@ export default function Videos({ Photos }) {
 
 const styles = StyleSheet.create({
   container: {
-    width: "100%",
+    width: "95%",
     justifyContent: "flex-start",
     flexDirection: "row",
     flexWrap: "wrap",
-    marginLeft: 10
+    marginLeft: Platform.OS === 'android' ? 12: null,
   },
   item: {
     margin: 5,

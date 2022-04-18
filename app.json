@@ -1,9 +1,9 @@
 {
   "expo": {
-    "name": "social-media",
-    "slug": "social-media",
+    "name": "inugo",
+    "slug": "inugo",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "default",
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",

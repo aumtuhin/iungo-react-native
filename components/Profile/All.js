@@ -1,4 +1,4 @@
-import { View, Image, StyleSheet } from "react-native";
+import { View, Image, StyleSheet, Platform } from "react-native";
 
 export default function All({ Photos }) {
   return (
@@ -20,11 +20,11 @@ export default function All({ Photos }) {
 
 const styles = StyleSheet.create({
   container: {
-    width: "100%",
+    width: "95%",
     justifyContent: "flex-start",
     flexDirection: "row",
     flexWrap: "wrap",
-    marginLeft: 10
+    marginLeft: Platform.OS === 'android' ? 12: null,
   },
   item: {
     margin: 5,

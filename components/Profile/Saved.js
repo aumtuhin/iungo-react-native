@@ -1,6 +1,6 @@
 import { View, Image, StyleSheet } from "react-native";
 
-export default function Photos({ Photos }) {
+export default function Saved({ Photos }) {
   return (
     <View style={styles.container}>
       {Photos.map((photo) => {
