@@ -1,15 +1,17 @@
-import { View, StyleSheet } from "react-native";
-import ProfileContents from "../components/Profile/ProfileContents";
+import { View, StyleSheet, ScrollView } from "react-native";
 import CoverPhoto from "../components/Profile/CoverPhoto";
 import DetailsArea from "../components/Profile/DetailsArea";
+import Posts from "../components/Profile/Posts";
 
 export default function ProfileScreen({ navigation }) {
   return (
-    <View style={styles.container}>
-      <CoverPhoto navigation={navigation} />
-      <DetailsArea />
-      <ProfileContents navigation={navigation} />
-    </View>
+    <ScrollView>
+      <View style={styles.container}>
+        <CoverPhoto navigation={navigation} />
+        <DetailsArea />
+        <Posts navigation={navigation} />
+      </View>
+    </ScrollView>
   );
 }
 
