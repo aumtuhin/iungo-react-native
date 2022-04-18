@@ -4,6 +4,7 @@ import Avatar from "../components/Avatar";
 import { colors } from "../shared/style";
 import { useState } from "react";
 import ButtonRadius from "../components/ButtonRadius";
+import ProfileContents from "../components/ProfileContents";
 
 const coverImage =
   "https://images.unsplash.com/photo-1615196677587-ecb0a8b68352?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80";
@@ -26,7 +27,7 @@ export default function ProfileScreen({ navigation }) {
   };
 
   const sendMessage = () => {
-    console.log("sent");
+    navigation.navigate("Inbox");
   };
 
   const editProfile = () => {
@@ -107,6 +108,7 @@ export default function ProfileScreen({ navigation }) {
           />
         )}
       </View>
+      <ProfileContents />
     </View>
   );
 }
