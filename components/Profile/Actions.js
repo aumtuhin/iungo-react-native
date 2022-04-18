@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View, StyleSheet } from "react-native";
 import { useState } from "react";
 import ButtonRadius from "../ButtonRadius";
 import { colors } from "../../shared/style";

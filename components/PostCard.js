@@ -54,15 +54,17 @@ export default function PostCard({
   };
 
   const navigateProfile = () => {
-    navigation.navigate("Profile");
+    navigation.navigate("Profile", {
+      user: user
+    });
   }
 
   return (
     <View style={styles.container}>
       <View style={styles.cardTopContainer}>
         <View style={styles.user}>
-          <Avatar avatar={user.avatar} size={35} onPressHandler={navigateProfile} />
-          <TouchableOpacity style={styles.nameBtn} onPress={navigateProfile}>
+          <Avatar avatar={user.avatar} size={35} onPressHandler={() => navigateProfile(user)} />
+          <TouchableOpacity style={styles.nameBtn} onPress={() => navigateProfile(user)}>
             <Text style={styles.name} >{user.name}</Text>
           </TouchableOpacity>
         </View>

@@ -5,10 +5,8 @@ import Avatar from "../Avatar";
 
 const coverImage =
   "https://images.unsplash.com/photo-1615196677587-ecb0a8b68352?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80";
-const avatar =
-  "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80";
-
-export default function CoverPhoto({ navigation }) {
+  
+export default function CoverPhoto({ navigation, user }) {
   const navigateBack = () => {
     navigation.navigate("Home");
   };
@@ -37,7 +35,7 @@ export default function CoverPhoto({ navigation }) {
         resizeMode="cover"
       />
       <View style={styles.avatarContainer}>
-        <Avatar avatar={avatar} size={100} />
+        <Avatar avatar={user.avatar} size={100} />
       </View>
     </View>
   );
