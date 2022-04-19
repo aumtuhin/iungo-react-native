@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import { Image, StyleSheet, View, TouchableOpacity, Alert } from "react-native";
 import { manipulateAsync, FlipType, SaveFormat } from "expo-image-manipulator";
 import { Ionicons } from "@expo/vector-icons";
-import { Feather } from '@expo/vector-icons';
+import { Feather } from "@expo/vector-icons";
 
-export default function ImagePreview({ uri, onPressHandle }) {
+export default function ImagePreview({ uri, onPressHandle, navigation }) {
   const [ready, setReady] = useState(false);
   const [image, setImage] = useState(null);
 
@@ -25,31 +25,42 @@ export default function ImagePreview({ uri, onPressHandle }) {
   };
 
   const createButtonAlert = () =>
-    Alert.alert("Discard Media?", "If you go back now you will lose any changes you've made.", [
-      {
-        text: "Discard",
-        onPress: () => onPressHandle(),
-        style: 'destructive',
-      },
-      {
-        text: "Save Draft",
-        onPress: () => onPressHandle(),
-        style: "default",
-      },
-      {
-        text: "Cancel",
-        style: "cancel",
-      },
-    ]);
+    Alert.alert(
+      "Discard Media?",
+      "If you go back now you will lose any changes you've made.",
+      [
+        {
+          text: "Discard",
+          onPress: () => onPressHandle(),
+          style: "destructive",
+        },
+        {
+          text: "Save Draft",
+          onPress: () => onPressHandle(),
+          style: "default",
+        },
+        {
+          text: "Cancel",
+          style: "cancel",
+        },
+      ]
+    );
+
+    const createPost = () => {
+      navigation.navigate('Home');
+    }
 
   return (
     <View style={{ backgroundColor: "#000", height: "100%" }}>
       <View style={styles.buttonContainer}>
-        <TouchableOpacity style={[styles.button, {backgroundColor: "rgba(0, 0, 0, 1)"}]} onPress={createButtonAlert}>
+        <TouchableOpacity
+          style={[styles.button, { backgroundColor: "rgba(0, 0, 0, 1)" }]}
+          onPress={createButtonAlert}
+        >
           <Ionicons name="chevron-back" size={25} color="white" />
         </TouchableOpacity>
-        <TouchableOpacity style={[styles.button, {backgroundColor: "#fff"}]}>
-        <Feather name="arrow-right" size={25} color="black" />
+        <TouchableOpacity style={[styles.button, { backgroundColor: "#fff" }]} onPress={createPost}>
+          <Feather name="arrow-right" size={25} color="black" />
         </TouchableOpacity>
       </View>
       <View style={styles.container}>

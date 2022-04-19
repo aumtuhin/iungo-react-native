@@ -111,7 +111,7 @@ export default function CameraScreen({ navigation }) {
         </Camera>
       )}
       {isPreview && (
-        <ImagePreview uri={uri} onPressHandle={cancelPreview} />
+        <ImagePreview uri={uri} onPressHandle={cancelPreview} navigation={navigation} />
       )}
     </SafeAreaView>
   );
