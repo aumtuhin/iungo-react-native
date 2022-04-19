@@ -1,4 +1,4 @@
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, Text, Platform } from "react-native";
 import IconButton from "./IconButton";
 
 export default function HomeHeader({ navigation }) {
@@ -16,6 +16,7 @@ export default function HomeHeader({ navigation }) {
         iconName="camera"
         iconBg="#eaeaea"
       />
+      <Text style={styles.LogoText}>iungo</Text>
       <IconButton
         onPressHandle={openInbox}
         iconName="message-circle"
@@ -33,5 +34,10 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
+  },
+  LogoText: {
+    fontSize: 22,
+    fontFamily:
+      Platform.OS === "android" ? null : "AvenirNextCondensed-DemiBoldItalic",
   },
 });

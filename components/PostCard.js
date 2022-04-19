@@ -28,7 +28,7 @@ export default function PostCard({
     console.log("More action");
   };
   const onLike = () => {
-    setLike(!like);
+    setLike(true);
   };
 
   const doubleTap = useCallback(() => {

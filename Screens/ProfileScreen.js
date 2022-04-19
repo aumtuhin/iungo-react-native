@@ -6,14 +6,14 @@ import Actions from "../components/Profile/Actions";
 
 export default function ProfileScreen({ navigation, route }) {
 
-  const { user, content, actions } = route.params;
+  const { user } = route.params;
 
   return (
     <ScrollView>
       <View style={styles.container}>
         <CoverPhoto navigation={navigation} user={user} />
         <DetailsArea name={user.name} motto={user.motto} />
-        <Actions navigation={navigation} />
+        <Actions navigation={navigation} currentUser={user.currentUser} />
         <Posts navigation={navigation} />
       </View>
     </ScrollView>
