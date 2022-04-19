@@ -1,5 +1,5 @@
 import { TouchableOpacity, Image, StyleSheet } from "react-native";
-import { colors } from "../shared/style";
+import { colors } from "../../shared/style";
 
 export default function Avatar({ avatar, size, onPressHandler }) {
   return (

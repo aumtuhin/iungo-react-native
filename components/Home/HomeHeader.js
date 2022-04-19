@@ -1,5 +1,5 @@
 import { View, StyleSheet, Text, Platform } from "react-native";
-import IconButton from "./IconButton";
+import IconButton from "../Buttons/IconButton";
 
 export default function HomeHeader({ navigation }) {
   const openCamera = () => {

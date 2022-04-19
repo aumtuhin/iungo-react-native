@@ -4,11 +4,11 @@ import {
   SafeAreaView,
   ActivityIndicator,
 } from "react-native";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { LinearGradient } from "expo-linear-gradient";
-import Input from "../components/Input";
-import DefaultButton from "../components/DefaultButton";
-import LinkButton from "../components/LinkButton";
+import Input from "../components/Inputs/Input";
+import DefaultButton from "../components/Buttons/DefaultButton";
+import LinkButton from "../components/Buttons/LinkButton";
 import { colors } from "../shared/style";
 
 export default function LoginScreen({ navigation }) {

@@ -1,8 +1,8 @@
 import { StyleSheet, FlatList, RefreshControl } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Posts, NewPosts } from "../shared/dummyData";
-import PostCard from "../components/PostCard";
-import HomeHeader from "../components/HomeHeader";
+import PostCard from "../components/Home/PostCard";
+import HomeHeader from "../components/Home/HomeHeader";
 import { colors } from "../shared/style";
 import { useState } from "react";
 

@@ -4,7 +4,7 @@ import { Camera } from "expo-camera";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { AntDesign } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
-import ImagePreview from "../components/ImagePreview";
+import ImagePreview from "../components/Camera/ImagePreview";
 
 export default function CameraScreen({ navigation }) {
   const camera = useRef();

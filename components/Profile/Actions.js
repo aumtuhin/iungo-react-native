@@ -1,6 +1,6 @@
 import { View, StyleSheet } from "react-native";
 import { useEffect, useState } from "react";
-import ButtonRadius from "../ButtonRadius";
+import ButtonRadius from '../Buttons/ButtonRadius';
 import { colors } from "../../shared/style";
 
 export default function Actions({ navigation, currentUser }) {

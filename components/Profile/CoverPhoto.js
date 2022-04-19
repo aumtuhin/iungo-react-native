@@ -1,7 +1,7 @@
 import { View, StyleSheet, Image } from "react-native";
 import React from "react";
-import IconButton from "../IconButton";
-import Avatar from "../Avatar";
+import IconButton from "../Buttons/IconButton";
+import Avatar from "./Avatar";
 
 const coverImage =
   "https://images.unsplash.com/photo-1615196677587-ecb0a8b68352?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80";

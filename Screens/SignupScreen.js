@@ -1,9 +1,9 @@
 import { StyleSheet, Text, SafeAreaView, TouchableOpacity } from "react-native";
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
-import Input from "../components/Input";
-import DefaultButton from "../components/DefaultButton";
-import LinkButton from "../components/LinkButton";
+import Input from "../components/Inputs/Input";
+import DefaultButton from "../components/Buttons/DefaultButton";
+import LinkButton from "../components/Buttons/LinkButton";
 
 export default function SignupScreen({ navigation }) {
   const submit = async () => {
