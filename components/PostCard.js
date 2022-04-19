@@ -28,7 +28,7 @@ export default function PostCard({
     console.log("More action");
   };
   const onLike = () => {
-    setLike(true);
+    setLike(!like);
   };
 
   const doubleTap = useCallback(() => {
@@ -38,7 +38,7 @@ export default function PostCard({
     setLastPressed(time);
     if (lastPressed) {
       if (delta < DOUBLE_PRESS_DELAY) {
-        setLike(!like);
+        setLike(true);
       }
     }
   }, [lastPressed]);
