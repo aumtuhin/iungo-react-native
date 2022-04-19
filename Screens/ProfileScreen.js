@@ -12,8 +12,8 @@ export default function ProfileScreen({ navigation, route }) {
     <ScrollView>
       <View style={styles.container}>
         <CoverPhoto navigation={navigation} user={user} />
-        <DetailsArea />
-        <Actions navigation={navigation} />
+        <DetailsArea name={user.name} motto={user.motto} />
+        <Actions navigation={navigation} currentUser={user.currentUser} />
         <Posts navigation={navigation} />
       </View>
     </ScrollView>

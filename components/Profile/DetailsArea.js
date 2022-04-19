@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import { colors } from "../../shared/style";
 
-export default function DetailsArea() {
+export default function DetailsArea({actions, name, motto}) {
   return (
     <View style={styles.detailsContainer}>
       <View style={styles.countContainer}>
@@ -15,9 +15,9 @@ export default function DetailsArea() {
         </TouchableOpacity>
       </View>
       <View style={styles.intro}>
-        <Text style={styles.name}>Sophia Maria</Text>
+        <Text style={styles.name}>{name}</Text>
         <Text style={styles.motto}>
-          "I love photography. It makes me feel one with nature"
+          "{motto}"
         </Text>
       </View>
     </View>

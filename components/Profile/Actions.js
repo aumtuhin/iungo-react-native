@@ -1,10 +1,10 @@
 import { View, StyleSheet } from "react-native";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ButtonRadius from "../ButtonRadius";
 import { colors } from "../../shared/style";
 
-export default function Actions({ navigation }) {
-  const [isItME, setIsItMe] = useState(null);
+export default function Actions({ navigation, currentUser }) {
+  const [isItME, setIsItMe] = useState(currentUser);
   const [isFollowing, setIsFollowing] = useState(false);
 
   const follow = () => {

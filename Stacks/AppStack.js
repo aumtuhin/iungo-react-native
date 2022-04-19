@@ -7,6 +7,7 @@ import ProfileScreen from "../Screens/ProfileScreen";
 import { Entypo } from "@expo/vector-icons";
 import { Feather } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
+import { Posts } from "../shared/dummyData";
 
 const Tab = createBottomTabNavigator();
 
@@ -77,6 +78,7 @@ export default function AppStack() {
       <Tab.Screen
         name="Profile"
         component={ProfileScreen}
+        initialParams={{user: Posts[0].user}}
         options={{
           tabBarShowLabel: false,
           tabBarStyle: { height: 70 },
