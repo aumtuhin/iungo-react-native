@@ -55,17 +55,26 @@ export default function PostCard({
 
   const navigateProfile = () => {
     navigation.navigate("Profile", {
-      user: user
+      user,
+      content,
+      actions,
     });
-  }
+  };
 
   return (
     <View style={styles.container}>
       <View style={styles.cardTopContainer}>
         <View style={styles.user}>
-          <Avatar avatar={user.avatar} size={35} onPressHandler={() => navigateProfile(user)} />
-          <TouchableOpacity style={styles.nameBtn} onPress={() => navigateProfile(user)}>
-            <Text style={styles.name} >{user.name}</Text>
+          <Avatar
+            avatar={user.avatar}
+            size={35}
+            onPressHandler={() => navigateProfile(user)}
+          />
+          <TouchableOpacity
+            style={styles.nameBtn}
+            onPress={() => navigateProfile(user)}
+          >
+            <Text style={styles.name}>{user.name}</Text>
           </TouchableOpacity>
         </View>
         <IconButton
@@ -139,7 +148,7 @@ const styles = StyleSheet.create({
   },
   name: {
     color: colors.grey,
-    fontSize: 14
+    fontSize: 14,
   },
   content: {
     width: "90%",
