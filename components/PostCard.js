@@ -54,7 +54,13 @@ export default function PostCard({
   };
 
   const navigateProfile = () => {
-    navigation.navigate("Profile", {
+    console.log(user);
+    let navigateTo = "";
+    console.log(user.currenUser);
+    if (user.currentUser) navigateTo = "Profile";
+    if (!user.currentUser) navigateTo = "UserProfile";
+
+    navigation.navigate(navigateTo, {
       user,
       content,
       actions,

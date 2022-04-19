@@ -3,6 +3,7 @@ import AppStack from "./AppStack";
 import InboxScreen from "../Screens/InboxScreen";
 import CameraScreen from "../Screens/CameraScreen";
 import CommentsScreen from "../Screens/CommentsScreen";
+import CurrentUserProfileScreen from "../Screens/CurrentUserProfileScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -32,6 +33,11 @@ export default function HomeScreenStack() {
         name="Comments"
         component={CommentsScreen}
         options={{ headerShown: true }}
+      />
+      <Stack.Screen
+        name="UserProfile"
+        component={CurrentUserProfileScreen}
+        options={{ headerShown: false }}
       />
     </Stack.Navigator>
   );

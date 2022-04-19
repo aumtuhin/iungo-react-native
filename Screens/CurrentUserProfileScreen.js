@@ -4,7 +4,7 @@ import DetailsArea from "../components/Profile/DetailsArea";
 import Posts from "../components/Profile/Posts";
 import Actions from "../components/Profile/Actions";
 
-export default function ProfileScreen({ navigation, route }) {
+export default function CurrentUserProfileScreen({ navigation, route }) {
 
   const { user } = route.params;
 
