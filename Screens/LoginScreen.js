@@ -9,7 +9,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import Input from "../components/Inputs/Input";
 import DefaultButton from "../components/Buttons/DefaultButton";
 import LinkButton from "../components/Buttons/LinkButton";
-import { colors } from "../shared/style";
+import { colors } from "../shared/styles";
 
 export default function LoginScreen({ navigation }) {
   const [isLoading, setIsLoading] = useState(false);

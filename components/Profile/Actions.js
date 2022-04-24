@@ -1,7 +1,7 @@
 import { View, StyleSheet } from "react-native";
 import { useEffect, useState } from "react";
-import ButtonRadius from '../Buttons/ButtonRadius';
-import { colors } from "../../shared/style";
+import ButtonRadius from "../Buttons/ButtonRadius";
+import { colors } from "../../shared/styles";
 
 export default function Actions({ navigation, currentUser }) {
   const [isItME, setIsItMe] = useState(currentUser);
@@ -12,7 +12,7 @@ export default function Actions({ navigation, currentUser }) {
   };
 
   const sendMessage = () => {
-    navigation.navigate("Inbox");
+    navigate("Inbox");
   };
 
   const editProfile = () => {
@@ -23,7 +23,6 @@ export default function Actions({ navigation, currentUser }) {
     <View style={styles.actionsContainer}>
       {isItME && (
         <ButtonRadius
-          navigation={navigation}
           onPressHandle={editProfile}
           btnText="Edit"
           bgColor={colors.purple}
@@ -33,7 +32,6 @@ export default function Actions({ navigation, currentUser }) {
       )}
       {!isItME && (
         <ButtonRadius
-          navigation={navigation}
           btnText={isFollowing ? "Unfollow" : "Follow"}
           onPressHandle={follow}
           bgColor={colors.purple}
@@ -43,7 +41,6 @@ export default function Actions({ navigation, currentUser }) {
       )}
       {!isItME && (
         <ButtonRadius
-          navigation={navigation}
           btnText="Message"
           onPressHandle={sendMessage}
           bgColor={colors.white}
