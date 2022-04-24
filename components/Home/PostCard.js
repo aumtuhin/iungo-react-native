@@ -12,7 +12,7 @@ import { AntDesign } from "@expo/vector-icons";
 import IconButton from '../Buttons/IconButton';
 import Avatar from "../Profile/Avatar";
 import { useState, useCallback } from "react";
-import { colors } from "../../shared/style";
+import { colors } from "../../shared/styles";
 
 export default function PostCard({
   user,

@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
 import { useState } from "react";
-import { colors } from "../../shared/style";
+import { colors } from "../../shared/styles";
 import { Data } from "../../shared/dummyData";
 import All from "./All";
 import Photos from "./Photos";

@@ -3,7 +3,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { Posts, NewPosts } from "../shared/dummyData";
 import PostCard from "../components/Home/PostCard";
 import HomeHeader from "../components/Home/HomeHeader";
-import { colors } from "../shared/style";
+import { colors } from "../shared/styles";
 import { useState } from "react";
 
 export default function HomeScreen({ navigation }) {

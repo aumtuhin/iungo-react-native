@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
-import { colors } from "../../shared/style";
+import { colors } from "../../shared/styles";
 
 export default function DetailsArea({actions, name, motto}) {
   return (
