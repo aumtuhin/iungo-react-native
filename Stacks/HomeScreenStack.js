@@ -27,7 +27,7 @@ export default function HomeScreenStack() {
       <Stack.Screen
         name="Inbox"
         component={InboxScreen}
-        options={{ headerShown: true }}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="Comments"
