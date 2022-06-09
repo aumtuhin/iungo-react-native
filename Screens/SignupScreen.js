@@ -4,6 +4,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import Input from "../components/Inputs/Input";
 import DefaultButton from "../components/Buttons/DefaultButton";
 import LinkButton from "../components/Buttons/LinkButton";
+import { colors } from "../shared/styles";
 
 export default function SignupScreen({ navigation }) {
   const submit = async () => {
@@ -24,7 +25,7 @@ export default function SignupScreen({ navigation }) {
         <Input placeHolderText="Username" />
         <Input placeHolderText="Email" />
         <Input isSecureText={true} placeHolderText="Password" />
-        <DefaultButton btnText="Signup" onPressHandle={submit} />
+        <DefaultButton btnText="Signup" color={colors.purple} onPressHandle={submit} />
         <LinkButton
           btnText="Do you have account? Login."
           onPressHandle={navigate}

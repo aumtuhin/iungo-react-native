@@ -1,8 +1,19 @@
-import { ScrollView, StyleSheet, SafeAreaView, Text } from "react-native";
+import {
+  ScrollView,
+  StyleSheet,
+  SafeAreaView,
+  Text,
+  View,
+  TouchableHighlight,
+} from "react-native";
 import InboxHeader from "../components/Inbox/InboxHeader";
 import Search from "../components/Inputs/Search";
 import { useState } from "react";
-import { GestureHandlerRootView } from "react-native-gesture-handler";
+import {
+  GestureHandlerRootView,
+  Swipeable,
+} from "react-native-gesture-handler";
+import { colors } from "../shared/styles";
 
 const chats = [
   {
@@ -31,10 +42,9 @@ export default function InboxScreen() {
       <Search placeHolderText="Search" />
       <ScrollView>
         <GestureHandlerRootView>
-          <Swipeable renderRightActions={renderRightActions}>
-            <TouchableHighlight underlayColor={colors.light} onPress={onPress}>
+          <Swipeable>
+            <TouchableHighlight underlayColor={colors.lightRed}>
               <View style={styles.container}>
-                <Image style={styles.image} source={image} />
                 <View>
                   <Text style={styles.title}>title</Text>
                   <Text style={styles.subTitle}>subtitle</Text>
