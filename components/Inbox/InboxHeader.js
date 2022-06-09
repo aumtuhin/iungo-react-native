@@ -1,4 +1,5 @@
 import { View, StyleSheet, Text, Platform } from "react-native";
+import { colors } from "../../shared/styles";
 import IconButton from "../Buttons/IconButton";
 
 export default function InboxHeader({ navigation }) {
@@ -13,10 +14,10 @@ export default function InboxHeader({ navigation }) {
     <View style={styles.header}>
       <IconButton
         onPressHandle={openCamera}
-        iconName="camera"
+        iconName="arrow-left"
         iconBg="#eaeaea"
       />
-      <Text style={styles.LogoText}>iungo</Text>
+      <Text style={styles.LogoText}>Inbox</Text>
       <IconButton
         onPressHandle={openInbox}
         iconName="message-circle"
@@ -36,6 +37,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   LogoText: {
+    color: colors.black,
     fontSize: 22,
     fontFamily:
       Platform.OS === "android" ? null : "AvenirNextCondensed-DemiBoldItalic",

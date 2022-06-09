@@ -8,7 +8,7 @@ import { useState } from "react";
 
 export default function HomeScreen({ navigation }) {
   const [posts, setPosts] = useState(Posts);
-  const [refreshig, setRefreshing] = useState(false);
+  const [refreshing, setRefreshing] = useState(false);
 
   const onRefresh = () => {
     setRefreshing(true);
@@ -37,7 +37,7 @@ export default function HomeScreen({ navigation }) {
       <FlatList
         refreshControl={
           <RefreshControl
-            refreshing={refreshig}
+            refreshing={refreshing}
             onRefresh={onRefresh}
             colors={[colors.purple]}
           />
