@@ -3,22 +3,22 @@ is a latin name means connect, a social media app.
 ## building with react-native expo cli
 
 ## Welcome Launch
-![Welcome](./docs/videos/welcome.gif)
+<img src="./docs/videos/welcome.gif"  width=30% height=30%>
 
 ## Login Screen
-![Login](./docs/images/login.PNG)
+<img src="./docs/images/login.PNG"  width=30% height=30%>
 
 ## Signup Screen
-![Signup](./docs/images/signup.PNG)
+<img src="./docs/images/signup.PNG"  width=30% height=30%>
 
 ## Camera Feature
-![Welcome](./docs/videos/camera.gif)
+<img src="./docs/videos/camera.gif"  width=30% height=30%>
 
 ## Home Screen
-![Home](./docs/images/home.PNG)
+<img src="./docs/images/home.PNG"  width=30% height=30%>
 
 ## Profile Screen
-![Profile](./docs/images/profile.PNG)
+<img src="./docs/images/profile.PNG"  width=30% height=30%>
 
 
 
