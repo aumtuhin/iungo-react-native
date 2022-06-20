@@ -12,7 +12,7 @@ is a latin name means connect, a social media app.
 ![Signup](./docs/images/signup.png)
 
 ## Camera Feature
-![Welcome](./docs/videos/camera.MOV)\
+![Welcome](./docs/videos/camera.MOV)
 
 ## Home Screen
 ![Home](./docs/images/home.png)
