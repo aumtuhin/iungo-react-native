@@ -6,19 +6,19 @@ is a latin name means connect, a social media app.
 ![Welcome](./docs/videos/welcome.MOV)
 
 ## Login Screen
-![Login](./docs/images/login.png)
+![Login](./docs/images/login.PNG)
 
 ## Signup Screen
-![Signup](./docs/images/signup.png)
+![Signup](./docs/images/signup.PNG)
 
 ## Camera Feature
 ![Welcome](./docs/videos/camera.MOV)
 
 ## Home Screen
-![Home](./docs/images/home.png)
+![Home](./docs/images/home.PNG)
 
 ## Profile Screen
-![Profile](./docs/images/profile.png)
+![Profile](./docs/images/profile.PNG)
 
 
 
